@@ -18,6 +18,7 @@
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
     <artifactId>gatein-bom-3.4</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Bill of Materials (BOM) needed for developing appplications for GateIn Portal 3.4</name>
     <url>http://gatein.org</url>
