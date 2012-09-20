@@ -14,11 +14,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jboss.bom</groupId>
-        <version>1.0.1.CR4</version>
+        <version>1.0.1.CR5</version>
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
-    <artifactId>gatein-bom-3.4</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>gatein-3.4-bom</artifactId>
+    <version>1.0.0.CR1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Bill of Materials (BOM) needed for developing appplications for GateIn Portal 3.4</name>
     <url>http://gatein.org</url>
@@ -35,7 +35,7 @@
     <properties>
         <!-- The most of version properties are inherited from parent -->
         
-        <version.org.jboss.portletbridge>3.1.0.Alpha2</version.org.jboss.portletbridge>
+        <version.org.jboss.portletbridge>3.1.0.Beta1</version.org.jboss.portletbridge>
     </properties>
     <dependencyManagement>
         <dependencies>
