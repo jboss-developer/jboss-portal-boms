@@ -18,11 +18,13 @@
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
     <artifactId>gatein-3.4-bom</artifactId>
-    <version>1.0.0.CR1-SNAPSHOT</version>
+    <version>1.0.0.Alpha1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Bill of Materials (BOM) needed for developing appplications for GateIn Portal 3.4</name>
     <url>http://gatein.org</url>
     <scm>
+        <connection>scm:git:git://github.com/ppalaga/gatein-bom.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/ppalaga/gatein-bom.git</developerConnection>
         <url>https://github.com/ppalaga/gatein-bom</url>
     </scm>
     <licenses>
