@@ -36,8 +36,12 @@
     </licenses>
     <properties>
         <!-- The most of version properties are inherited from parent -->
-        
         <version.org.jboss.portletbridge>3.1.0.Beta1</version.org.jboss.portletbridge>
+        
+        <!-- maven-release-plugin -->
+        <useReleaseProfile>false</useReleaseProfile>
+        <pushChanges>false</pushChanges>
+        
     </properties>
     <dependencyManagement>
         <dependencies>
