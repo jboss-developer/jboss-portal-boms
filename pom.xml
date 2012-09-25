@@ -9,7 +9,8 @@
     License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
     OF ANY KIND, either express or implied. See the License for the specific 
     language governing permissions and limitations under the License. -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jboss.bom</groupId>
@@ -25,8 +26,8 @@
         <connection>scm:git:git://github.com/ppalaga/gatein-bom.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/ppalaga/gatein-bom.git</developerConnection>
         <url>https://github.com/ppalaga/gatein-bom</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -36,7 +37,7 @@
     </licenses>
     <properties>
         <!-- The most of version properties are inherited from parent -->
-        <version.org.jboss.portletbridge>3.1.0.Alpha1</version.org.jboss.portletbridge>
+        <version.org.jboss.portletbridge>3.1.0.Alpha2</version.org.jboss.portletbridge>
         
         <!-- maven-release-plugin -->
         <maven.release.plugin.version>2.3.2</maven.release.plugin.version>
@@ -102,4 +103,21 @@
             </plugin>
         </plugins>
     </build>
+    <repositories>
+        <repository>
+            <!-- This repository will not be necessary when JBoss Portlet Bridge will be mirrored on Maven Central -->
+            <id>jboss-public-repository-group</id>
+            <name>JBoss Public Maven Repository Group</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
