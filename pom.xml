@@ -43,7 +43,9 @@
     </licenses>
     <properties>
         <!-- The most of version properties are inherited from parent -->
-        <version.org.jboss.portletbridge>3.1.0.Alpha2</version.org.jboss.portletbridge>
+        <version.org.jboss.portletbridge>3.1.0.Beta3</version.org.jboss.portletbridge>
+        <version.org.richfaces>4.2.3.CR1</version.org.richfaces>
+        <version.javax.portlet.portlet.api>2.0</version.javax.portlet.portlet.api>
         
         <!-- maven-release-plugin -->
         <maven.release.plugin.version>2.3.2</maven.release.plugin.version>
@@ -68,12 +70,34 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>org.jboss.portletbridge</groupId>
-                <artifactId>portletbridge-parent</artifactId>
-                <version>${version.org.jboss.portletbridge}</version>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-bom</artifactId>
+                <version>${version.org.richfaces}</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
+            <dependency>
+                <groupId>org.jboss.portletbridge</groupId>
+                <artifactId>portletbridge-api</artifactId>
+                <version>${version.org.jboss.portletbridge}</version>
+                <scope>provided</scope>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.portletbridge</groupId>
+                <artifactId>portletbridge-extension-richfaces</artifactId>
+                <version>${version.org.jboss.portletbridge}</version>
+                <scope>runtime</scope>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>javax.portlet</groupId>
+                <artifactId>portlet-api</artifactId>
+                <version>${version.javax.portlet.portlet.api}</version>
+                <scope>provided</scope>
+                <type>jar</type>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
     <build>
