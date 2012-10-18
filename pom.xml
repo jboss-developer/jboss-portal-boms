@@ -28,9 +28,9 @@
     <name>Bill of Materials (BOM) needed for developing appplications for GateIn Portal 3.4</name>
     <url>http://gatein.org</url>
     <scm>
-        <connection>scm:git:git://github.com/ppalaga/gatein-bom.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/ppalaga/gatein-bom.git</developerConnection>
-        <url>https://github.com/ppalaga/gatein-bom</url>
+        <connection>scm:git:git://github.com/gatein/gatein-bom.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/gatein/gatein-bom.git</developerConnection>
+        <url>https://github.com/gatein/gatein-bom</url>
         <tag>HEAD</tag>
     </scm>
     <licenses>
