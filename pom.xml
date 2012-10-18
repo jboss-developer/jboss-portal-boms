@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jboss.bom</groupId>
-        <version>1.0.1.CR5</version>
+        <version>1.0.1.Final</version>
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
     <artifactId>gatein-3.4-bom</artifactId>
@@ -61,7 +61,10 @@
                 versions of artifacts. Here we use the jboss-javaee-6.0 stack (you can read this as the JBoss stack of the 
                 Java EE 6 APIs), and we use version 3.0.0.Final which is the latest release of the stack. You can actually 
                 use this stack with any version of JBoss AS that implements Java EE 6, not just JBoss AS 7!
-            -->
+                
+                Commented out because depending on jboss-javaee-6.0 as it exists now is risky as there are known issues with 
+                some APIs (CDI, Bean Validation, plus many with unknown status). We want to find a way to include those EE bits
+                which are known to work. 
             <dependency>
                 <groupId>org.jboss.spec</groupId>
                 <artifactId>jboss-javaee-6.0</artifactId>
@@ -69,6 +72,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            -->
             <dependency>
                 <groupId>org.richfaces</groupId>
                 <artifactId>richfaces-bom</artifactId>
