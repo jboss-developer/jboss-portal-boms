@@ -15,8 +15,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jboss.bom</groupId>
@@ -24,7 +23,7 @@
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
     <artifactId>gatein-3.4-bom</artifactId>
-    <version>1.0.0.Alpha04-SNAPSHOT</version>
+    <version>1.0.0.Alpha05-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Bill of Materials (BOM) needed for developing appplications for GateIn Portal 3.4</name>
     <url>http://gatein.org</url>
