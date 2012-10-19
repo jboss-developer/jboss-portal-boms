@@ -22,10 +22,10 @@
         <version>1.0.1.Final</version>
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
-    <artifactId>gatein-3.4-bom</artifactId>
-    <version>1.0.0.Alpha05-SNAPSHOT</version>
+    <artifactId>gatein-3.5-bom</artifactId>
+    <version>1.0.0.Alpha01-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Bill of Materials (BOM) needed for developing appplications for GateIn Portal 3.4</name>
+    <name>Bill of Materials (BOM) needed for developing appplications for GateIn Portal 3.5</name>
     <url>http://gatein.org</url>
     <scm>
         <connection>scm:git:git://github.com/gatein/gatein-bom.git</connection>
