@@ -42,8 +42,8 @@
     </licenses>
     <properties>
         <!-- The most of version properties are inherited from parent -->
-        <version.org.jboss.portletbridge>3.1.0.Beta3</version.org.jboss.portletbridge>
-        <version.org.richfaces>4.2.3.CR1</version.org.richfaces>
+        <version.org.jboss.portletbridge>3.1.0.Final</version.org.jboss.portletbridge>
+        <version.org.richfaces>4.2.3.Final</version.org.richfaces>
         <version.javax.portlet.portlet.api>2.0</version.javax.portlet.portlet.api>
         
         <!-- maven-release-plugin -->
