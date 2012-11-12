@@ -19,7 +19,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jboss.bom</groupId>
-        <version>1.0.1.Final</version>
+        <version>1.0.2.Final</version>
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
     <artifactId>gatein-3.5-bom</artifactId>
@@ -44,6 +44,7 @@
         <!-- The most of version properties are inherited from parent -->
         <version.org.jboss.portletbridge>3.1.0.Final</version.org.jboss.portletbridge>
         <version.org.richfaces>4.2.3.Final</version.org.richfaces>
+        <version.javax.faces-api>2.1</version.javax.faces-api>
         <version.javax.portlet.portlet.api>2.0</version.javax.portlet.portlet.api>
         
         <!-- maven-release-plugin -->
