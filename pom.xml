@@ -15,7 +15,8 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jboss.bom</groupId>
@@ -44,6 +45,9 @@
         <!-- The most of version properties are inherited from parent -->
         <version.org.jboss.portletbridge>3.1.0.Final</version.org.jboss.portletbridge>
         <version.org.richfaces>4.2.3.Final</version.org.richfaces>
+        <!-- The following needs to be revisited with each chnage of ${version.org.richfaces} -->
+        <version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>2.0.0.Beta1</version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>
+
         <version.javax.faces-api>2.1</version.javax.faces-api>
         <version.javax.portlet.portlet.api>2.0</version.javax.portlet.portlet.api>
         
@@ -55,24 +59,6 @@
     </properties>
     <dependencyManagement>
         <dependencies>
-            <!--
-                JBoss distributes a complete set of Java EE 6 APIs including a Bill of Materials (BOM). A BOM specifies the 
-                versions of a "stack" (or a collection) of artifacts. We use this here so that we always get the correct 
-                versions of artifacts. Here we use the jboss-javaee-6.0 stack (you can read this as the JBoss stack of the 
-                Java EE 6 APIs), and we use version 3.0.0.Final which is the latest release of the stack. You can actually 
-                use this stack with any version of JBoss AS that implements Java EE 6, not just JBoss AS 7!
-                
-                Commented out because depending on jboss-javaee-6.0 as it exists now is risky as there are known issues with 
-                some APIs (CDI, Bean Validation, plus many with unknown status). We want to find a way to include those EE bits
-                which are known to work. 
-            <dependency>
-                <groupId>org.jboss.spec</groupId>
-                <artifactId>jboss-javaee-6.0</artifactId>
-                <version>${version.org.jboss.spec.jboss.javaee.6.0}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            -->
             <dependency>
                 <groupId>org.richfaces</groupId>
                 <artifactId>richfaces-bom</artifactId>
@@ -81,10 +67,27 @@
                 <type>pom</type>
             </dependency>
             <dependency>
+                <!-- This comes from richfaces-bom, here we change the scope as it is provided in GateIn@JBoss -->
+                <groupId>org.jboss.spec.javax.faces</groupId>
+                <artifactId>jboss-jsf-api_2.1_spec</artifactId>
+                <version>${version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec}</version>
+                <scope>provided</scope>
+                <type>jar</type>
+            </dependency>
+
+            <!-- Portlet Bridge artfacts redeclared explicity so that they can be discovered more easily -->
+            <dependency>
                 <groupId>org.jboss.portletbridge</groupId>
                 <artifactId>portletbridge-api</artifactId>
                 <version>${version.org.jboss.portletbridge}</version>
-                <scope>provided</scope>
+                <scope>runtime</scope>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.portletbridge</groupId>
+                <artifactId>portletbridge-impl</artifactId>
+                <version>${version.org.jboss.portletbridge}</version>
+                <scope>runtime</scope>
                 <type>jar</type>
             </dependency>
             <dependency>
@@ -94,6 +97,8 @@
                 <scope>runtime</scope>
                 <type>jar</type>
             </dependency>
+            
+            <!-- Plain Portlet -->
             <dependency>
                 <groupId>javax.portlet</groupId>
                 <artifactId>portlet-api</artifactId>
@@ -101,7 +106,6 @@
                 <scope>provided</scope>
                 <type>jar</type>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
     <build>
