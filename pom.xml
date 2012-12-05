@@ -42,9 +42,9 @@
     </licenses>
     <properties>
         <!-- The most of version properties are inherited from parent -->
-        <version.org.jboss.portletbridge>3.1.0.Final</version.org.jboss.portletbridge>
+        <version.org.jboss.portletbridge>3.1.1.Final</version.org.jboss.portletbridge>
         <version.org.richfaces>4.2.3.Final</version.org.richfaces>
-        <!-- The following needs to be revisited with each chnage of ${version.org.richfaces} -->
+        <!-- The following needs to be revisited with each change of ${version.org.richfaces} according to richfaces-bom -->
         <version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>2.0.0.Beta1</version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>
 
         <version.javax.faces-api>2.1</version.javax.faces-api>
