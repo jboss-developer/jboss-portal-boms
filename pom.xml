@@ -32,12 +32,6 @@
         <system>bugzilla</system>
         <url>https://bugzilla.redhat.com/buglist.cgi?component=Quickstarts&amp;product=JBoss%20Enterprise%20Portal%20Platform%206</url>
     </issueManagement>
-    <scm>
-        <connection>scm:git:git://github.com/jboss-developer/jboss-portal-boms.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/jboss-developer/jboss-portal-boms.git</developerConnection>
-        <url>https://github.com/jboss-developer/jboss-portal-boms.git</url>
-        <tag>6.1.1.build-2</tag>
-    </scm>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -47,21 +41,20 @@
     </licenses>
     <properties>
         <!-- The most of version properties are inherited from parent -->
-        <version.org.jboss.portletbridge>3.3.1.Final</version.org.jboss.portletbridge>
-        <version.cdi.portlet.integration>1.0.3.Final</version.cdi.portlet.integration>
+        <version.org.jboss.portletbridge>3.3.1.Final-redhat-1</version.org.jboss.portletbridge>
+        <version.cdi.portlet.integration>1.0.3.Final-redhat-1</version.cdi.portlet.integration>
         <version.javax.faces-api>2.1</version.javax.faces-api>
         <!--
             This should be kept the same as version.richfaces4 in org.jboss.portletbridge:portletbridge-parent.
             Note that version.richfaces is defined also in jboss-bom-parent.
         -->
-        <version.org.richfaces>4.3.4.Final</version.org.richfaces>
+        <version.org.richfaces>4.3.4.Final-redhat-1</version.org.richfaces>
         <!-- This is should be used in human readable text only. Keep in sync with version.richfaces -->
         <version.org.richfaces.mm>4.3</version.org.richfaces.mm>
         <version.javax.portlet.portlet.api>2.0</version.javax.portlet.portlet.api>
 
-        <version.org.jboss.gatein.api>1.0.1.Final</version.org.jboss.gatein.api>
+        <version.org.jboss.gatein.api>1.0.1.Final-redhat-1</version.org.jboss.gatein.api>
 
-        <!-- maven-release-plugin -->
         <maven.release.plugin.useReleaseProfile>false</maven.release.plugin.useReleaseProfile>
         <maven.release.plugin.pushChanges>false</maven.release.plugin.pushChanges>
 
