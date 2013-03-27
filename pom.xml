@@ -19,7 +19,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jboss.bom</groupId>
-        <version>1.0.2.Final</version>
+        <version>1.0.4.Final</version>
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
     <artifactId>gatein-3.6-bom</artifactId>
@@ -58,7 +58,8 @@
         <maven.release.plugin.useReleaseProfile>false</maven.release.plugin.useReleaseProfile>
         <maven.release.plugin.pushChanges>false</maven.release.plugin.pushChanges>
 
-        <version.org.apache.maven.surefire.plugin>2.10</version.org.apache.maven.surefire.plugin>
+        <version.surefire.plugin>2.10</version.surefire.plugin>
+        <version.org.jboss.as.plugins.maven.plugin>7.3.Final</version.org.jboss.as.plugins.maven.plugin>
 
     </properties>
     <dependencyManagement>
@@ -135,7 +136,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>${version.org.apache.maven.surefire.plugin}</version>
+                    <version>${version.surefire.plugin}</version>
                 </plugin>
                 <!--
                 The JBoss AS plugin deploys your war to a local JBoss AS container
@@ -144,7 +145,7 @@
                 <plugin>
                     <groupId>org.jboss.as.plugins</groupId>
                     <artifactId>jboss-as-maven-plugin</artifactId>
-                    <version>${version.org.jboss.as.plugins.jboss.as.maven.plugin}</version>
+                    <version>${version.org.jboss.as.plugins.maven.plugin}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
