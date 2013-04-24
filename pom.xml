@@ -15,11 +15,12 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jboss.bom</groupId>
-        <version>1.0.4.Final</version>
+        <version>1.0.5.Final</version>
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
     <artifactId>gatein-3.6-bom</artifactId>
@@ -42,13 +43,16 @@
     </licenses>
     <properties>
         <!-- The most of version properties are inherited from parent -->
-        <version.org.jboss.portletbridge>3.1.2.Final</version.org.jboss.portletbridge>
-        <version.org.richfaces>4.2.3.Final</version.org.richfaces>
+        <version.org.jboss.portletbridge>3.2.0.Final</version.org.jboss.portletbridge>
         <!-- The following needs to be revisited with each change of ${version.org.richfaces} according to richfaces-bom -->
         <!-- <version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>2.0.7.Final-redhat-1</version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec> -->
-        <version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>2.0.0.Beta1</version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>
+        <version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>2.0.7.Final</version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>
         <version.javax.faces-api>2.1</version.javax.faces-api>
         <version.javax.portlet.portlet.api>2.0</version.javax.portlet.portlet.api>
+
+        <!-- The following needs to be revisited with each change of ${version.org.jboss.spec.jboss.javaee.6.0} according to
+             org.jboss.spec:jboss-javaee-6.0 -->
+        <version.javax.enterprise>1.0-SP4</version.javax.enterprise>
 
         <version.org.jboss.gatein.api>1.0.0.Alpha01</version.org.jboss.gatein.api>
 
@@ -65,14 +69,32 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.jboss.spec</groupId>
+                <artifactId>jboss-javaee-6.0</artifactId>
+                <version>${version.org.jboss.spec.jboss.javaee.6.0}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <!-- This comes org.jboss.spec:from jboss-javaee-6.0, here we change the scope as it is provided in GateIn@JBoss -->
+                <groupId>javax.enterprise</groupId>
+                <artifactId>cdi-api</artifactId>
+                <version>${version.javax.enterprise}</version>
+                <scope>provided</scope>
+                <type>jar</type>
+            </dependency>
+
+            <dependency>
                 <groupId>org.richfaces</groupId>
                 <artifactId>richfaces-bom</artifactId>
+                <!-- defined in jboss-bom-parent. Check if it is the same version as in portletbridge-api -->
                 <version>${version.org.richfaces}</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
             <dependency>
                 <!-- This comes from richfaces-bom, here we change the scope as it is provided in GateIn@JBoss -->
+                <!-- Note that ${version.org.jboss.spec.javax.faces} is defined also in org.jboss.spec:jboss-javaee-6.0 -->
                 <groupId>org.jboss.spec.javax.faces</groupId>
                 <artifactId>jboss-jsf-api_2.1_spec</artifactId>
                 <version>${version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec}</version>
