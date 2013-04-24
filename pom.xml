@@ -45,16 +45,11 @@
         <!-- The most of version properties are inherited from parent -->
         <version.org.jboss.portletbridge>3.2.0.Final</version.org.jboss.portletbridge>
         <version.cdi.portlet.integration>1.0.0.Final</version.cdi.portlet.integration>
-        <!-- The following needs to be revisited with each change of ${version.org.richfaces} according to richfaces-bom -->
-        <!-- <version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>2.0.7.Final-redhat-1</version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec> -->
-        <version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>2.0.7.Final</version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>
         <version.javax.faces-api>2.1</version.javax.faces-api>
-        <version.org.richfaces>4.2.3.Final</version.org.richfaces>
+        <!-- This is should be used in human readable text only.
+             Keep in sync with ${version.org.richfaces} defined in richfaces-bom -->
+        <version.org.richfaces.mm>4.3</version.org.richfaces.mm>
         <version.javax.portlet.portlet.api>2.0</version.javax.portlet.portlet.api>
-
-        <!-- The following needs to be revisited with each change of ${version.org.jboss.spec.jboss.javaee.6.0} according to
-             org.jboss.spec:jboss-javaee-6.0 -->
-        <version.javax.enterprise>1.0-SP4</version.javax.enterprise>
 
         <version.org.jboss.gatein.api>1.0.0.Alpha01</version.org.jboss.gatein.api>
 
@@ -77,14 +72,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>
-                <!-- This comes org.jboss.spec:from jboss-javaee-6.0, here we change the scope as it is provided in GateIn@JBoss -->
-                <groupId>javax.enterprise</groupId>
-                <artifactId>cdi-api</artifactId>
-                <version>${version.javax.enterprise}</version>
-                <scope>provided</scope>
-                <type>jar</type>
-            </dependency>
 
             <dependency>
                 <groupId>org.richfaces</groupId>
@@ -93,15 +80,6 @@
                 <version>${version.org.richfaces}</version>
                 <scope>import</scope>
                 <type>pom</type>
-            </dependency>
-            <dependency>
-                <!-- This comes from richfaces-bom, here we change the scope as it is provided in GateIn@JBoss -->
-                <!-- Note that ${version.org.jboss.spec.javax.faces} is defined also in org.jboss.spec:jboss-javaee-6.0 -->
-                <groupId>org.jboss.spec.javax.faces</groupId>
-                <artifactId>jboss-jsf-api_2.1_spec</artifactId>
-                <version>${version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec}</version>
-                <scope>provided</scope>
-                <type>jar</type>
             </dependency>
 
             <!-- Portlet Bridge artifacts redeclared explicity so that they can be discovered more easily -->
