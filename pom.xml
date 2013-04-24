@@ -44,10 +44,12 @@
     <properties>
         <!-- The most of version properties are inherited from parent -->
         <version.org.jboss.portletbridge>3.2.0.Final</version.org.jboss.portletbridge>
+        <version.cdi.portlet.integration>1.0.0.Final</version.cdi.portlet.integration>
         <!-- The following needs to be revisited with each change of ${version.org.richfaces} according to richfaces-bom -->
         <!-- <version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>2.0.7.Final-redhat-1</version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec> -->
         <version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>2.0.7.Final</version.org.jboss.spec.javax.faces.jboss-jsf-api_2.1_spec>
         <version.javax.faces-api>2.1</version.javax.faces-api>
+        <version.org.richfaces>4.2.3.Final</version.org.richfaces>
         <version.javax.portlet.portlet.api>2.0</version.javax.portlet.portlet.api>
 
         <!-- The following needs to be revisited with each change of ${version.org.jboss.spec.jboss.javaee.6.0} according to
@@ -102,27 +104,34 @@
                 <type>jar</type>
             </dependency>
 
-            <!-- Portlet Bridge artfacts redeclared explicity so that they can be discovered more easily -->
+            <!-- Portlet Bridge artifacts redeclared explicity so that they can be discovered more easily -->
             <dependency>
                 <groupId>org.jboss.portletbridge</groupId>
                 <artifactId>portletbridge-api</artifactId>
                 <version>${version.org.jboss.portletbridge}</version>
-                <scope>runtime</scope>
+                <scope>provided</scope>
                 <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>org.jboss.portletbridge</groupId>
                 <artifactId>portletbridge-impl</artifactId>
                 <version>${version.org.jboss.portletbridge}</version>
-                <scope>runtime</scope>
+                <scope>provided</scope>
                 <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>org.jboss.portletbridge</groupId>
                 <artifactId>portletbridge-extension-richfaces</artifactId>
                 <version>${version.org.jboss.portletbridge}</version>
-                <scope>runtime</scope>
+                <scope>provided</scope>
                 <type>jar</type>
+            </dependency>
+
+            <dependency>
+                <groupId>org.gatein</groupId>
+                <artifactId>cdi-portlet-integration</artifactId>
+                <version>${version.cdi.portlet.integration}</version>
+                <scope>provided</scope>
             </dependency>
 
             <dependency>
