@@ -23,7 +23,7 @@
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
     <artifactId>gatein-3.6-bom</artifactId>
-    <version>1.0.1.Alpha02-SNAPSHOT</version>
+    <version>1.0.0.Beta02-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Bill of Materials (BOM) needed for developing appplications for GateIn Portal 3.5</name>
     <url>http://gatein.org</url>
@@ -50,7 +50,7 @@
         <version.org.richfaces.mm>4.3</version.org.richfaces.mm>
         <version.javax.portlet.portlet.api>2.0</version.javax.portlet.portlet.api>
 
-        <version.org.jboss.gatein.api>1.0.0.Alpha01</version.org.jboss.gatein.api>
+        <version.org.jboss.gatein.api>1.0.0.CR3</version.org.jboss.gatein.api>
 
         <!-- maven-release-plugin -->
         <!-- <maven.release.plugin.version>2.2.2</maven.release.plugin.version> -->
