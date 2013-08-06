@@ -43,7 +43,7 @@
     <properties>
         <!-- The most of version properties are inherited from parent -->
         <version.org.jboss.portletbridge>3.2.1.Final</version.org.jboss.portletbridge>
-        <version.cdi.portlet.integration>1.0.0.Final</version.cdi.portlet.integration>
+        <version.cdi.portlet.integration>1.0.2.Final</version.cdi.portlet.integration>
         <version.javax.faces-api>2.1</version.javax.faces-api>
         <!--
             This should be kept the same as version.richfaces4 in org.jboss.portletbridge:portletbridge-parent.
@@ -54,7 +54,7 @@
         <version.org.richfaces.mm>4.3</version.org.richfaces.mm>
         <version.javax.portlet.portlet.api>2.0</version.javax.portlet.portlet.api>
 
-        <version.org.jboss.gatein.api>1.0.0.Final</version.org.jboss.gatein.api>
+        <version.org.jboss.gatein.api>1.0.1.Final</version.org.jboss.gatein.api>
 
         <!-- maven-release-plugin -->
         <!-- <maven.release.plugin.version>2.2.2</maven.release.plugin.version> -->
