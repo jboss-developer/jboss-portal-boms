@@ -28,10 +28,7 @@
     <packaging>pom</packaging>
     <name>Bill of Materials (BOM) needed for developing appplications for JBoss Portal</name>
     <url>http://www.jboss.org</url>
-    <issueManagement>
-        <system>bugzilla</system>
-        <url>https://bugzilla.redhat.com/buglist.cgi?component=Quickstarts&amp;product=JBoss%20Enterprise%20Portal%20Platform%206</url>
-    </issueManagement>
+
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
