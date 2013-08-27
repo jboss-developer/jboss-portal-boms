@@ -62,9 +62,6 @@
         <maven.release.plugin.useReleaseProfile>false</maven.release.plugin.useReleaseProfile>
         <maven.release.plugin.pushChanges>false</maven.release.plugin.pushChanges>
 
-        <version.surefire.plugin>2.10</version.surefire.plugin>
-        <version.org.jboss.as.plugins.maven.plugin>7.3.Final</version.org.jboss.as.plugins.maven.plugin>
-
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -139,27 +136,6 @@
         </dependencies>
     </dependencyManagement>
     <build>
-        <pluginManagement>
-            <plugins>
-                <!--
-                The Maven Surefire plugin tests your application. Here we ensure we are using a version compatible with Arquillian
-                -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>${version.surefire.plugin}</version>
-                </plugin>
-                <!--
-                The JBoss AS plugin deploys your war to a local JBoss AS container
-                To use, set the JBOSS_HOME environment variable and run: mvn package jboss-as:deploy
-                -->
-                <plugin>
-                    <groupId>org.jboss.as.plugins</groupId>
-                    <artifactId>jboss-as-maven-plugin</artifactId>
-                    <version>${version.org.jboss.as.plugins.maven.plugin}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
