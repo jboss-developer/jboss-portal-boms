@@ -19,18 +19,23 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jboss.bom</groupId>
-        <version>1.0.4.Final</version>
+        <version>1.0.4.Final-redhat-9</version>
         <artifactId>jboss-bom-parent</artifactId>
     </parent>
-    <artifactId>gatein-3.6-bom</artifactId>
-    <version>1.0.4.Final-SNAPSHOT</version>
+    <groupId>org.jboss.bom.portal</groupId>
+    <artifactId>jboss-portal-bom</artifactId>
+    <version>6.1.1.build-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Bill of Materials (BOM) needed for developing appplications for GateIn Portal 3.6</name>
-    <url>http://gatein.org</url>
+    <name>Bill of Materials (BOM) needed for developing appplications for JBoss Portal</name>
+    <url>http://www.jboss.org</url>
+    <issueManagement>
+        <system>bugzilla</system>
+        <url>https://bugzilla.redhat.com/buglist.cgi?component=Quickstarts&amp;product=JBoss%20Enterprise%20Portal%20Platform%206</url>
+    </issueManagement>
     <scm>
-        <connection>scm:git:git://github.com/gatein/gatein-bom.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/gatein/gatein-bom.git</developerConnection>
-        <url>https://github.com/gatein/gatein-bom</url>
+        <connection>scm:git:git://github.com/jboss-developer/jboss-portal-boms.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/jboss-developer/jboss-portal-boms.git</developerConnection>
+        <url>https://github.com/jboss-developer/jboss-portal-boms.git</url>
         <tag>HEAD</tag>
     </scm>
     <licenses>
@@ -57,8 +62,6 @@
         <version.org.jboss.gatein.api>1.0.1.Final</version.org.jboss.gatein.api>
 
         <!-- maven-release-plugin -->
-        <!-- <maven.release.plugin.version>2.2.2</maven.release.plugin.version> -->
-        <maven.release.plugin.version>2.3.2</maven.release.plugin.version>
         <maven.release.plugin.useReleaseProfile>false</maven.release.plugin.useReleaseProfile>
         <maven.release.plugin.pushChanges>false</maven.release.plugin.pushChanges>
 
@@ -126,13 +129,6 @@
                 <scope>provided</scope>
                 <type>jar</type>
             </dependency>
-<!--
-          <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>11.0.2-redhat-2</version>
-          </dependency>
--->
         </dependencies>
     </dependencyManagement>
     <build>
@@ -140,7 +136,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>${maven.release.plugin.version}</version>
                 <configuration>
                     <useReleaseProfile>${maven.release.plugin.useReleaseProfile}</useReleaseProfile>
                     <pushChanges>${maven.release.plugin.pushChanges}</pushChanges>
