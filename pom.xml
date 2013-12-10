@@ -47,7 +47,7 @@
     </licenses>
     <properties>
         <!-- The most of version properties are inherited from parent -->
-        <version.org.jboss.portletbridge>3.3.0.Final</version.org.jboss.portletbridge>
+        <version.org.jboss.portletbridge>3.3.1.Final</version.org.jboss.portletbridge>
         <version.cdi.portlet.integration>1.0.3.Final</version.cdi.portlet.integration>
         <version.javax.faces-api>2.1</version.javax.faces-api>
         <!--
