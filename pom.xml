@@ -99,11 +99,11 @@
                 <scope>provided</scope>
                 <type>jar</type>
             </dependency>
+
             <dependency>
                 <groupId>org.jboss.portletbridge</groupId>
                 <artifactId>portletbridge-extension-richfaces</artifactId>
                 <version>${version.org.jboss.portletbridge}</version>
-                <scope>provided</scope>
                 <type>jar</type>
             </dependency>
 
