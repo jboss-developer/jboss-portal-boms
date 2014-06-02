@@ -47,14 +47,14 @@
     </licenses>
     <properties>
         <!-- The most of version properties are inherited from parent -->
-        <version.org.jboss.portletbridge>3.3.1.Final</version.org.jboss.portletbridge>
+        <version.org.jboss.portletbridge>3.3.2.Final</version.org.jboss.portletbridge>
         <version.cdi.portlet.integration>1.0.3.Final</version.cdi.portlet.integration>
         <version.javax.faces-api>2.1</version.javax.faces-api>
         <!--
             This should be kept the same as version.richfaces4 in org.jboss.portletbridge:portletbridge-parent.
             Note that version.richfaces is defined also in jboss-bom-parent.
         -->
-        <version.org.richfaces>4.3.4.Final</version.org.richfaces>
+        <version.org.richfaces>4.3.7.Final</version.org.richfaces>
         <!-- This is should be used in human readable text only. Keep in sync with version.richfaces -->
         <version.org.richfaces.mm>4.3</version.org.richfaces.mm>
         <version.javax.portlet.portlet.api>2.0</version.javax.portlet.portlet.api>
