@@ -24,7 +24,7 @@
     </parent>
     <groupId>org.jboss.bom.portal</groupId>
     <artifactId>jboss-portal-bom</artifactId>
-    <version>6.2.0.build-4</version>
+    <version>6.2.0.build-5-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Bill of Materials (BOM) needed for developing appplications for JBoss Portal</name>
     <url>http://www.jboss.org</url>
